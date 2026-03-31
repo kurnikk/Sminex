@@ -1,0 +1,302 @@
+.news-card {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 100px;
+    align-items: flex-start;
+    padding: 58px 28px 61px;
+    transition: background-color $transition-200;
+
+    &:hover {
+        background-color: $color-twilight-blue;
+    }
+
+    &:focus-visible {
+        background-color: $color-twilight-blue;
+        outline: none;
+    }
+
+    @media (max-width: 1439px) {
+        gap: 70px;
+    }
+
+    @media (max-width: 1350px) {
+        gap: 60px;
+        padding: 55px 0 57px;
+    }
+
+    @media (max-width: 1280px) {
+        gap: 55px;
+    }
+
+    @media (max-width: 1165px) {
+        gap: 45px;
+    }
+
+    @media (max-width: 920px) {
+        gap: 35px;
+    }
+
+    @media (max-width: 825px) {
+        gap: 25px;
+    }
+
+    @include vp-767 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        padding: 30px 0;
+    }
+
+    &__img {
+        @media (max-width: 1439px) {
+            width: 330px;
+            height: 210px;
+        }
+
+        @media (max-width: 1220px) {
+            width: 320px;
+            height: 200px;
+        }
+
+        @media (max-width: 1125px) {
+            width: 300px;
+            height: 180px;
+        }
+
+        @media (max-width: 1075px) {
+            width: 290px;
+            height: 170px;
+        }
+
+        @media (max-width: 920px) {
+            width: 280px;
+            height: 160px;
+        }
+
+        @include vp-767 {
+            width: 100%;
+            height: 180px;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+
+        @media (max-width: 1439px) {
+            gap: 50px;
+        }
+
+        @media (max-width: 1220px) {
+            gap: 30px;
+        }
+
+        @media (max-width: 920px) {
+            gap: 20px;
+        }
+
+        @include vp-767 {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media (max-width: 1220px) {
+            gap: 14px;
+        }
+
+        @media (max-width: 1125px) {
+            gap: 9px;
+        }
+    }
+
+    &__title {
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 28px;
+        color: $color-blue-charcoa;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        margin: 0;
+
+        @media (max-width: 1439px) {
+            font-size: 23px;
+            line-height: 27px;
+        }
+
+        @media (max-width: 1280px) {
+            font-size: 21px;
+            line-height: 25px;
+        }
+
+        @media (max-width: 1165px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @media (max-width: 1125px) {
+            font-size: 19px;
+            line-height: 23px;
+        }
+
+        @media (max-width: 1075px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        @media (max-width: 920px) {
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        @include vp-767 {
+            font-size: 20px;
+            line-height: 24px;
+            order: 2;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media (max-width: 1220px) {
+            gap: 14px;
+        }
+
+        @media (max-width: 1125px) {
+            gap: 9px;
+        }
+
+        @include vp-767 {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 32px;
+        }
+    }
+
+    &__date {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-mischka;
+
+        @media (max-width: 1125px) {
+            font-size: 13px;
+            line-height: 19px;
+        }
+
+        @include vp-767 {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &__tag {
+        width: 124px;
+        background-color: $color-ecru-white;
+        border-radius: 60px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-blue-charcoa;
+        padding: 8px 16px;
+
+        @media (max-width: 1125px) {
+            font-size: 13px;
+            line-height: 19px;
+            width: 118px;
+        }
+
+        @media (max-width: 825px) {
+            font-size: 12px;
+            line-height: 18px;
+            width: 111px;
+        }
+
+        @include vp-767 {
+            line-height: 16px;
+        }
+
+        &--little {
+            width: 114px;
+
+            @media (max-width: 1125px) {
+                width: 108px;
+            }
+
+            @media (max-width: 825px) {
+                width: 102px;
+            }
+        }
+    }
+
+    &__list {
+        padding: 0 0 0 18px;
+        list-style-type: disc;
+
+        @media (max-width: 1165px) {
+            padding: 0 0 0 16px;
+        }
+
+        @media (max-width: 1125px) {
+            padding: 0 0 0 15px;
+        }
+
+        @media (max-width: 920px) {
+            padding: 0 0 0 14px;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-blue-charcoa;
+        margin: 0;
+
+        @media (max-width: 1400px) {
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        @media (max-width: 1280px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media (max-width: 1165px) {
+            font-size: 15px;
+            line-height: 23px;
+        }
+
+        @media (max-width: 1125px) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        @media (max-width: 1075px) {
+            font-size: 13px;
+            line-height: 21px;
+        }
+
+        @media (max-width: 920px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        @include vp-767 {
+            line-height: 16px;
+        }
+    }
+}
